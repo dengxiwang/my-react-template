@@ -1,0 +1,129 @@
+@import url("./theme.less");
+
+.left-login-container {
+	height: 100%;
+	background-color: @card-background-color;
+}
+
+.right-login-container {
+	position: relative;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	> div {
+		max-width: 480px;
+	}
+
+	.login-header-container {
+		margin: 12px;
+		color: @font-color-level2;
+	}
+
+	.alert-message {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		max-width: 100%;
+		z-index: 2;
+	}
+
+	.login-bottom-container {
+		margin: 12px 0px 0px 0px;
+		color: @font-color-level2;
+	}
+
+	.login-title {
+		font-size: 1.6rem;
+		font-weight: bold;
+		color: @parimary-color;
+		margin-bottom: 24px;
+	}
+
+	.login-box {
+		position: relative;
+		display: flex;
+		overflow: hidden;
+		flex-direction: column;
+		align-items: center;
+		padding: 48px 48px 60px 48px;
+		padding-bottom: 32px;
+		border-radius: @border-radius;
+		background-color: @card-background-color;
+		min-height: 500px;
+		width: 432px;
+
+		.form {
+			position: relative;
+			display: flex;
+			height: 100%;
+			flex-direction: column;
+			justify-content: space-between;
+			width: calc(100%);
+
+			.extra-area {
+				position: absolute;
+				bottom: -12px;
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.right-login-container {
+		justify-content: flex-start;
+		background-color: @card-background-color;
+		overflow: scroll;
+
+		.login-bottom-container {
+			margin: 12px;
+		}
+
+		.login-box {
+			padding: 48px 24px 12px 24px;
+			height: 100dvh;
+			width: 100%;
+			min-height: auto;
+
+			.form {
+				justify-content: flex-start;
+			}
+		}
+	}
+}
+
+@media screen and(max-width:996px) {
+	.left-login-container {
+		display: none;
+	}
+}
+
+@media screen and (max-height: 632px) {
+	.left-login-container {
+		display: none;
+	}
+
+	.right-login-container {
+		justify-content: flex-start;
+		background-color: @card-background-color;
+		overflow: scroll;
+
+		.login-bottom-container {
+			margin: 12px;
+		}
+
+		.login-box {
+			padding: 48px 24px 12px 24px;
+			height: 100dvh;
+			width: 100%;
+			min-height: auto;
+
+			.form {
+				justify-content: flex-start;
+			}
+		}
+	}
+}

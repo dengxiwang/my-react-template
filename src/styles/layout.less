@@ -1,0 +1,70 @@
+@import url("./theme.less");
+
+.my-header-container {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	gap: 12px;
+	align-items: center;
+	background-color: @header-background-color;
+	height: @header-height;
+	width: 100%;
+	padding: 0px @container-padding;
+	color: @primary-back-font-color;
+
+	.logo-area {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 2px 8px 2px 2px;
+		gap: 4px;
+		font-size: 16px;
+		letter-spacing: 2px;
+
+		.logo {
+			filter: brightness(100);
+		}
+	}
+
+	.logo-area:hover {
+		cursor: pointer;
+		border-radius: @border-radius;
+		transition: background-color 0.3s;
+		background-color: @hover-background-color;
+	}
+}
+
+.layout-sider-content {
+	position: relative;
+
+	.layout-sider-container {
+		height: calc(100dvh - @header-height);
+		overflow: hidden;
+		background-color: @card-background-color;
+
+		> div {
+			padding: 0px 4px;
+
+			button {
+				width: 100% !important;
+				color: @font-color-level2 !important;
+			}
+		}
+	}
+
+	.layout-content-container {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		margin: 12px;
+		height: calc(100% - 24px);
+
+		.content {
+			background-color: @card-background-color;
+			height: 100%;
+			padding: 12px;
+			border-radius: @border-radius;
+		}
+	}
+}

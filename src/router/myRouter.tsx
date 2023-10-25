@@ -1,17 +1,26 @@
+import { ReactNode } from "react";
 import Home from "../pages/home";
+import Login from "../pages/login";
 
-type myRoutersType = {
+export interface myRoutersType {
 	path: string;
-	element: JSX.Element;
-	children?: myRoutersType;
-}[];
+	element: ReactNode;
+	children?: myRoutersType[];
+	auth: boolean;
+	title?: string;
+}
 
-const myRouters: myRoutersType = [
+export const myRouters: myRoutersType[] = [
 	{
 		path: "/",
 		element: <Home />,
-		children: [],
+		auth: true,
+		title: "首页",
+	},
+	{
+		path: "login",
+		element: <Login />,
+		auth: false,
+		title: "登录",
 	},
 ];
-
-export default myRouters;
